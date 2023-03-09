@@ -1,3 +1,4 @@
+// Button
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
     padding: $padding-y $padding-x;
     font-size: $font-size;
@@ -22,12 +23,12 @@
     }
 
     &:focus,
-  &.focus {
-    color: $hover-color;
-    background: $hover-background;
-    border-color: $hover-border;    
-    outline: none;
-  }
+    &.focus {
+        color: $hover-color;
+        background: $hover-background;
+        border-color: $hover-border;
+        outline: none;
+    }
 
     &.disabled,
     &:disabled {
@@ -35,5 +36,11 @@
         color: $color;
         border-color: $border;
     }
-    
+}
+
+// Alert
+@mixin alert-style($background, $border, $color) {
+    color: $color;
+    background: $background;
+    border-color: $border;
 }
