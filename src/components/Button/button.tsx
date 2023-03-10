@@ -1,21 +1,15 @@
 import classNames from "classnames";
 
-export enum ButtonType {
-    Primary = 'primary',
-    Default = 'default',
-    Danger = 'danger',
-    Link = 'link'
-}
-
-export enum ButtonSize {
-    Small = 'sm',
-    Large = 'lg'
-}
+export type ButtonSize = 'lg' | 'sm';
+export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 
 interface BaseButtonProps {
     className?: string;
-    btnType?: string;
-    size?: string;
+    /**设置 Button 的类型 */
+    btnType?: ButtonType;
+     /**设置 Button 的尺寸 */
+    size?: ButtonSize;
+    /**设置 Button 的禁用 */
     disabled?: boolean;
     href?: string;
     children: React.ReactNode
@@ -25,7 +19,16 @@ type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElemen
 type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
-const Button: React.FC<ButtonProps> = (props) => {
+/**
+ * 为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
+ * 
+ * ```javascript
+ * 
+ * import { Button } from 'freemyui'
+ * 
+ * ```
+ */
+export const Button: React.FC<ButtonProps> = (props) => {
     const {
         className,
         btnType,
@@ -39,10 +42,10 @@ const Button: React.FC<ButtonProps> = (props) => {
     const classes = classNames('btn', className, {
         [`btn-${btnType}`]: btnType,
         [`btn-${size}`]: size,
-        'disabled': btnType === ButtonType.Link && disabled
+        'disabled': btnType === 'link' && disabled
     });
 
-    if (btnType === ButtonType.Link && href) {
+    if (btnType === 'link' && href) {
         return (
             <a
                 href={href}
@@ -67,7 +70,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
     disabled: false,
-    btnType: ButtonType.Default
+    btnType: 'default'
 }
 
 export default Button;
