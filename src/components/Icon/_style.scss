@@ -1,0 +1,6 @@
+// 这样就不用一个主题一个主题设颜色了
+@each $key, $val in $theme-colors {
+    .icon-#{$key} {
+        color: $val;
+    }
+}
