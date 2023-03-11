@@ -1,5 +1,10 @@
 import '../src/styles/index.scss';
 
+//不加这三行图标显示不出来
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -10,7 +15,8 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Welcome', 'Button', 'Alert', 'Menu'], 
+      // 目录顺序
+      order: ['Welcome', 'Icon', 'Button', 'Alert', 'Menu'], 
     },
   },
 }

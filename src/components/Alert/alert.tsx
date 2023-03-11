@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import { useState } from "react";
+import Transition from "../ Transition/transition";
+import Icon from "../Icon/icon";
 
 export type AlertType = 'success' | 'default' | 'danger' | 'warning'
 
-interface AlertProps {
+export interface AlertProps {
     className?: string;
     /**标题 */
     title: string;
@@ -51,15 +53,17 @@ export const Alert: React.FC<AlertProps> = (props) => {
     }
 
     return (
-        <>
-            {!hide &&
-                <div className={classes}>
-                    <span className={titleClass}>{title}</span>
-                    {description && <p className="alert-desc">{description}</p>}
-                    {closable && <span className="alert-close" onClick={handleClose}>close</span>}
-                </div>
-            }
-        </>
+        <Transition
+            in={!hide}
+            timeout={300}
+            animation="zoom-in-top"
+        >
+            <div className={classes} data-testid="test-alert" >
+                <span className={titleClass}>{title}</span>
+                {description && <p className="alert-desc">{description}</p>}
+                {closable && <span className="alert-close" onClick={handleClose}><Icon icon="times" /></span>}
+            </div>
+        </Transition>
     )
 }
 

@@ -1,6 +1,7 @@
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons' // 全部图标引入，通过字符串
+import Alert from './components/Alert/alert';
 import Icon from "./components/Icon/icon";
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
@@ -11,6 +12,8 @@ function App() {
   return (
     <div className="App">
       <Icon icon='coffee' size='10x' theme='danger'/>
+
+      <Alert title='12' />
 
       <Menu defaultIndex='0'>
         <MenuItem>
