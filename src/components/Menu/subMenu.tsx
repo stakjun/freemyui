@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import Icon from "../Icon/icon";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
-import { CSSTransition } from 'react-transition-group'
 import Transition from "../ Transition/transition";
 
 export interface SubMenuProps {

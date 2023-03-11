@@ -58,7 +58,7 @@ export const Alert: React.FC<AlertProps> = (props) => {
             timeout={300}
             animation="zoom-in-top"
         >
-            <div className={classes} data-testid="test-alert" >
+            <div className={classes} data-testid="test-alert">
                 <span className={titleClass}>{title}</span>
                 {description && <p className="alert-desc">{description}</p>}
                 {closable && <span className="alert-close" onClick={handleClose}><Icon icon="times" /></span>}

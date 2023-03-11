@@ -16,7 +16,7 @@ export const parameters = {
   options: {
     storySort: {
       // 目录顺序
-      order: ['Welcome', 'Icon', 'Button', 'Alert', 'Menu'], 
+      order: ['Welcome', 'Icon', 'Button', 'Alert', 'Menu', 'Tabs'], 
     },
   },
 }

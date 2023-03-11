@@ -6,6 +6,8 @@ import Icon from "./components/Icon/icon";
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import Tabs from './components/Tabs/tabs';
+import TabItem from './components/Tabs/tabItem';
 library.add(fas);
 
 function App() {
@@ -34,6 +36,12 @@ function App() {
             </MenuItem>
         </SubMenu>
     </Menu>
+
+    <Tabs>
+        <TabItem label="tab1">content1</TabItem>
+        <TabItem label="tab2">content2</TabItem>
+        <TabItem label="disabled" disabled>content3</TabItem>
+      </Tabs>
     </div>
   );
 }
