@@ -8,9 +8,15 @@ import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import Tabs from './components/Tabs/tabs';
 import TabItem from './components/Tabs/tabItem';
+import AutoComplete from './components/AutoComplete/autoComplete';
 library.add(fas);
 
 function App() {
+  const lakers = ['bradley', 'pope', 'caruso', 'cook', 'cousins',
+  'james', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando']
+  const handleFetch = (query: string) => {
+    return lakers.filter(name => name.includes(query))
+  }
   return (
     <div className="App">
       <Icon icon='coffee' size='10x' theme='danger'/>
@@ -42,6 +48,8 @@ function App() {
         <TabItem label="tab2">content2</TabItem>
         <TabItem label="disabled" disabled>content3</TabItem>
       </Tabs>
+
+      {/* <AutoComplete fetchSuggestions={handleFetch}/> */}
     </div>
   );
 }

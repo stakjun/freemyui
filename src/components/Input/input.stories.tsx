@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { useState } from 'react'
 import { Input } from './input'
 
 export default {

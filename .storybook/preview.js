@@ -13,10 +13,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  viewMode: 'docs',
   options: {
     storySort: {
       // 目录顺序
-      order: ['Welcome', 'Icon', 'Button', 'Alert', 'Menu', 'Tabs'], 
+      order: ['Welcome', 'Icon', 'Button', 'Alert', 'Menu', 'Tabs', 'Input', 'AutoComplete'], 
     },
   },
 }
