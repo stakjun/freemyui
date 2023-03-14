@@ -1,6 +1,7 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import classNames from 'classnames';
 import Icon from '../Icon/icon';
+import React from 'react';
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLElement>, 'size'> {
     /**是否禁用 Input */

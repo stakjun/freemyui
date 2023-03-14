@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface TabItemProps {
     /** Tab选项上面的文字 */
     label: string | React.ReactElement;
