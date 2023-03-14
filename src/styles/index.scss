@@ -2,4 +2,31 @@
 @import "variables";
 
 //layout
-@import "reboot"
+@import "reboot";
+
+//mixin
+@import "mixin";
+
+// animation
+@import "animation";
+
+//btn
+@import "../components/Button/style";
+
+// Alert
+@import "../components/Alert/style";
+
+// Menu
+@import "../components/Menu/style";
+
+// Icon
+@import "../components/Icon/style";
+
+// Tabs
+@import "../components/Tabs/style";
+
+// Input
+@import "../components/Input/style";
+
+// AutoComplete
+@import "../components/AutoComplete/style";
