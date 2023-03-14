@@ -19,5 +19,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         TOKEN: ${{ secrets.TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: feat/components
         FOLDER: storybook-static
