@@ -18,6 +18,6 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN:: ${{ secrets.TOKEN }}
-        BRANCH: feat/components
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
         FOLDER: storybook-static
