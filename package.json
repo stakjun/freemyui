@@ -1,6 +1,6 @@
 {
   "name": "freemyui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React components library",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
