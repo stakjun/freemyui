@@ -50,6 +50,7 @@
     "build-css": "sass src/styles/index.scss dist/index.css",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
+    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
