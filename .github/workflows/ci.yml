@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy Demo
+name: freemyui
 on:
   push:
     branches:
@@ -13,8 +13,7 @@ jobs:
         persist-credentials: false
     - name: Install and Build
       run: |
-        npm install
-        npm run-script build
+        npm run build-storybook
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
