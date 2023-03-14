@@ -18,6 +18,6 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        TOKEN: ${{ secrets.TOKEN }}
+        GITHUB_TOKEN:: ${{ secrets.TOKEN }}
         BRANCH: feat/components
         FOLDER: storybook-static
